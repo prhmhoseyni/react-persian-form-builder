@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --RPFF-prose-primary: #1E1E1E;
+  --RPFF-prose-hint: #888888;
+  --RPFF-prose-disabled: #888888;
+
+  --RPFF-brand: #1685C5;
+  --RPFF-brand-light: #DEE5F0;
+
+  --RPFF-error: #F0493D;
+  --RPFF-error-light: #FFCFCC;
+
+  font-family: "Vazirmatn", sans-serif;
+}
+
+/**
+ * ---------------------------------------------------------------------------------------------------------------------
+ * styles
+ */
+.form-control {
+  font-size: 0.96rem;
+  line-height: 1.6rem;
+  color: var(--RPFF-prose-primary);
+  background-color: #EEF1F6;
+  width: 100%;
+  min-height: 3rem;
+  padding-inline: 0.75rem;
+  outline: none;
+  border: 1.5px solid #E1E6EF;
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.4s;
+}
+
+/* :::: FIREFOX :::: */
+.form-control:focus-visible,
+.form-control:focus-within {
+  outline: none !important;
+}
+
+.form-control::placeholder {
+  color: var(--RPFF-prose-hint);
+}
+
+.form-control:focus {
+  border-color: var(--RPFF-prose-hint);
+  box-shadow: 0 0 0 3px var(--RPFF-brand-light);
+}
+
+.form-control:disabled {
+  color: var(--RPFF-prose-disabled);
+  cursor: not-allowed;
+}
+
+/* :::: FORM FIELD - HAS ERROR :::: */
+.form-control--error {
+  border-color: var(--RPFF-error);
+}
+
+.form-control--error:focus {
+  border-color: var(--RPFF-error);
+}
+
+.form-control--error:focus {
+  box-shadow: 0 0 0 3px var(--RPFF-error-light);
+}
